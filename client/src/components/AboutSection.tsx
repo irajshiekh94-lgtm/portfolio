@@ -29,48 +29,58 @@ export default function AboutSection() {
       data-testid="about-section"
     >
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           
-          {/* Hello Title */}
+          {/* Hello Title - Centered */}
           <div 
-            className={`transition-all duration-1000 mb-8 ${
+            className={`transition-all duration-1000 text-center mb-16 ${
               animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <h2 className="text-6xl lg:text-7xl font-light text-foreground leading-tight">
+            <h2 className="text-6xl lg:text-8xl font-light text-foreground leading-tight">
               Hello,
             </h2>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-8 items-start">
+          {/* Main Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            {/* Photo - Fixed width, aligned to start */}
-            <div 
-              className={`transition-all duration-1000 delay-300 w-full lg:w-80 flex-shrink-0 ${
-                animateContent ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-              }`}
-            >
-              <div className="w-80 h-96 rounded-lg overflow-hidden shadow-lg mx-auto lg:mx-0">
-                <img 
-                  src={profileImage}
-                  alt="Iraj Shahid - UI/UX Designer"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  data-testid="about-profile-image"
-                />
+            {/* Photo Column */}
+            <div className="lg:col-span-5">
+              <div 
+                className={`transition-all duration-1000 delay-300 ${
+                  animateContent ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+                }`}
+              >
+                <div className="relative mx-auto lg:mx-0 max-w-sm">
+                  <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+                    <img 
+                      src={profileImage}
+                      alt="Iraj Shahid - UI/UX Designer"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      data-testid="about-profile-image"
+                    />
+                  </div>
+                  
+                  {/* Decorative elements */}
+                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full animate-pulse"></div>
+                  <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-accent/30 rounded-full"></div>
+                </div>
               </div>
             </div>
 
-            {/* Text Content - Aligned to start at same level as photo */}
-            <div className="flex-1 lg:pt-0">
+            {/* Text Content Column */}
+            <div className="lg:col-span-7 space-y-8">
               <div 
                 className={`transition-all duration-1000 delay-500 ${
                   animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
               >
-                <h3 className="text-2xl font-medium text-foreground mb-4">
+                <h3 className="text-4xl lg:text-5xl font-light text-foreground mb-6 leading-tight">
                   I'm Iraj Shahid
                 </h3>
-                <p className="text-sm text-muted-foreground mb-6 font-medium tracking-wide uppercase">
+                <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full mb-8"></div>
+                <p className="text-lg text-muted-foreground mb-8 font-light tracking-wide">
                   4th year student in Industrial Design at Sir Syed School of Design, Lyari, France
                 </p>
               </div>
@@ -80,17 +90,41 @@ export default function AboutSection() {
                   animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
               >
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
                   <p>
-                    Curious and passionate, I am interested in many fields such as photography or computer science.
+                    Curious and passionate, I am interested in many fields such as photography and computer science.
                   </p>
                   <p>
-                    But because of my interests always in by the law one that stds me the most: the creativity mixed with empathy.
-                    So I ended up discovering the UI/UX Designer job by going to a design art shop design conference.
+                    But because of my interests, the one that stands out the most is creativity mixed with empathy.
+                    So I ended up discovering the UI/UX Designer profession by attending a design conference.
                   </p>
                   <p>
-                    With this portfolio I aim to highlight my interest in UI, Modelling and rendering since more broadly, in image creation.
+                    With this portfolio I aim to highlight my interest in UI, modeling and rendering—more broadly, in image creation.
                   </p>
+                </div>
+              </div>
+
+              {/* Skills or CTA section */}
+              <div 
+                className={`transition-all duration-1000 delay-900 ${
+                  animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+              >
+                <div className="pt-8 border-t border-border/30">
+                  <p className="text-sm text-muted-foreground uppercase tracking-widest mb-4">
+                    Core Focus
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                      UI Design
+                    </span>
+                    <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                      UX Research
+                    </span>
+                    <span className="px-4 py-2 bg-muted/20 text-muted-foreground rounded-full text-sm font-medium">
+                      Prototyping
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
