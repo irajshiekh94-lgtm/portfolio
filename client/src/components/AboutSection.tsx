@@ -28,68 +28,32 @@ export default function AboutSection() {
       className="min-h-screen flex items-center relative overflow-hidden bg-background"
       data-testid="about-section"
     >
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-6xl mx-auto">
+      <div className="container mx-auto px-8 relative z-10">
+        <div className="max-w-7xl mx-auto">
           
-          {/* Hello Title - Centered */}
-          <div 
-            className={`transition-all duration-1000 text-center mb-16 ${
-              animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
-            <h2 className="text-6xl lg:text-8xl font-light text-foreground leading-tight">
-              Hello,
-            </h2>
-          </div>
-
-          {/* Main Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="flex flex-col lg:flex-row gap-16 items-start">
             
-            {/* Text Content Column */}
-            <div className="lg:col-span-7 space-y-8">
+            {/* Left Column */}
+            <div className="lg:w-1/3 space-y-8">
+              {/* Hello Title */}
               <div 
-                className={`transition-all duration-1000 delay-500 ${
+                className={`transition-all duration-1000 ${
                   animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
               >
-                <h3 className="text-4xl lg:text-5xl font-light text-foreground mb-6 leading-tight">
-                  I'm Iraj Shahid
-                </h3>
-                <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full mb-8"></div>
-                <p className="text-lg text-muted-foreground mb-8 font-light tracking-wide">
-                  4th year student in Industrial Design at Sir Syed School of Design, Lyari, France
-                </p>
+                <h2 className="text-5xl lg:text-6xl font-light text-foreground leading-tight mb-8">
+                  Hello,
+                </h2>
               </div>
 
-              <div 
-                className={`transition-all duration-1000 delay-700 ${
-                  animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}
-              >
-                <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
-                  <p>
-                    Curious and passionate, I am interested in many fields such as photography and computer science.
-                  </p>
-                  <p>
-                    But because of my interests, the one that stands out the most is creativity mixed with empathy.
-                    So I ended up discovering the UI/UX Designer profession by attending a design conference.
-                  </p>
-                  <p>
-                    With this portfolio I aim to highlight my interest in UI, modeling and rendering—more broadly, in image creation.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Photo Column */}
-            <div className="lg:col-span-5">
+              {/* Photo */}
               <div 
                 className={`transition-all duration-1000 delay-300 ${
                   animateContent ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
                 }`}
               >
-                <div className="relative mx-auto lg:mx-0 max-w-sm">
-                  <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+                <div className="w-full max-w-sm">
+                  <div className="w-full aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
                     <img 
                       src={profileImage}
                       alt="Iraj Shahid - UI/UX Designer"
@@ -97,10 +61,130 @@ export default function AboutSection() {
                       data-testid="about-profile-image"
                     />
                   </div>
+                </div>
+              </div>
+
+              {/* Personal Description */}
+              <div 
+                className={`transition-all duration-1000 delay-500 ${
+                  animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+              >
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  I'm Iraj, a budding <strong>UX designer</strong>. I enjoy using my creativity and problem solving skills to solve customer experiences. With a keen understanding of usability, I specialize in creating interfaces that don't just look great, but also work intuitively. Passionate about user-centered design that continuous learning is the key to success, and I'm always on the lookout for fresh challenges to keep me motivated and engaged.
+                </p>
+              </div>
+            </div>
+
+            {/* Middle Column */}
+            <div className="lg:w-1/3 space-y-8">
+              {/* Experience Section */}
+              <div 
+                className={`transition-all duration-1000 delay-700 ${
+                  animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+              >
+                <h3 className="text-lg font-semibold text-foreground mb-4">Experience</h3>
+                
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-medium text-foreground">UX Generalist Designer at Forbes Marshall Pvt Ltd</h4>
+                    <p className="text-sm text-muted-foreground mb-2">15 May 2024 - 12 July 2024</p>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• Organized interviews and conducted surveys for better user experience</li>
+                      <li>• Created user flows and user journey, illustrations</li>
+                      <li>• Visual design elements, final prototyping along with user testing</li>
+                      <li>• Also created a design system for further projects reference with the team.</li>
+                    </ul>
+                  </div>
                   
-                  {/* Decorative elements */}
-                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full animate-pulse"></div>
-                  <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-accent/30 rounded-full"></div>
+                  <div>
+                    <h4 className="font-medium text-foreground">Visual Designer at Birbal Infotech Pvt Ltd</h4>
+                    <p className="text-sm text-muted-foreground mb-2">12 April 2024 - 12 May 2024</p>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• Worked for a travel company, made creatives for social media along with iterary template using figma and illustrator.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Software Section */}
+              <div 
+                className={`transition-all duration-1000 delay-900 ${
+                  animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+              >
+                <h3 className="text-lg font-semibold text-foreground mb-4">Software</h3>
+                <div className="flex flex-wrap gap-3">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <span className="text-blue-600 font-bold text-xs">Fi</span>
+                  </div>
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <span className="text-orange-600 font-bold text-xs">Ai</span>
+                  </div>
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <span className="text-purple-600 font-bold text-xs">Ps</span>
+                  </div>
+                  <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                    <span className="text-red-600 font-bold text-xs">Ai</span>
+                  </div>
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <span className="text-orange-600 font-bold text-xs">≡</span>
+                  </div>
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <span className="text-blue-600 font-bold text-xs">{`{}`}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="lg:w-1/3 space-y-8">
+              {/* Key Strengths */}
+              <div 
+                className={`transition-all duration-1000 delay-1100 ${
+                  animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+              >
+                <h3 className="text-lg font-semibold text-foreground mb-4">Key Strengths</h3>
+                <ul className="text-sm text-muted-foreground space-y-2">
+                  <li>• User Study & Analysis</li>
+                  <li>• User Flow</li>
+                  <li>• Sketching</li>
+                  <li>• Journey Mapping</li>
+                  <li>• Information Architecture</li>
+                  <li>• Usability Testing</li>
+                  <li>• Wireframing</li>
+                  <li>• Prototyping</li>
+                  <li>• Responsive Design</li>
+                </ul>
+              </div>
+
+              {/* Soft Skills */}
+              <div 
+                className={`transition-all duration-1000 delay-1300 ${
+                  animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+              >
+                <h3 className="text-lg font-semibold text-foreground mb-4">Soft Skills</h3>
+                <ul className="text-sm text-muted-foreground space-y-2">
+                  <li>• Problem Solving</li>
+                  <li>• Empathy</li>
+                  <li>• Critical thinking</li>
+                  <li>• Communication</li>
+                </ul>
+              </div>
+
+              {/* Information */}
+              <div 
+                className={`transition-all duration-1000 delay-1500 ${
+                  animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+              >
+                <h3 className="text-lg font-semibold text-foreground mb-4">Information</h3>
+                <div className="text-sm text-muted-foreground space-y-2">
+                  <p>irajshahid.portfolio.com</p>
+                  <p>linkedin.com/in/irajshahid</p>
                 </div>
               </div>
             </div>
