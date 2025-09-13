@@ -44,26 +44,24 @@ export default function AboutSection() {
 
           <div className="flex flex-col lg:flex-row gap-8 items-start">
             
-            {/* Photo */}
+            {/* Photo - Fixed width, aligned to start */}
             <div 
-              className={`transition-all duration-1000 delay-300 lg:w-80 flex-shrink-0 ${
+              className={`transition-all duration-1000 delay-300 w-full lg:w-80 flex-shrink-0 ${
                 animateContent ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
               }`}
             >
-              <div className="relative">
-                <div className="w-80 h-96 rounded-lg overflow-hidden shadow-lg">
-                  <img 
-                    src={profileImage}
-                    alt="Iraj Shahid - UI/UX Designer"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                    data-testid="about-profile-image"
-                  />
-                </div>
+              <div className="w-80 h-96 rounded-lg overflow-hidden shadow-lg mx-auto lg:mx-0">
+                <img 
+                  src={profileImage}
+                  alt="Iraj Shahid - UI/UX Designer"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  data-testid="about-profile-image"
+                />
               </div>
             </div>
 
-            {/* Text Content */}
-            <div className="flex-1 space-y-6">
+            {/* Text Content - Aligned to start at same level as photo */}
+            <div className="flex-1 lg:pt-0">
               <div 
                 className={`transition-all duration-1000 delay-500 ${
                   animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
