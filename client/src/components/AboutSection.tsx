@@ -28,10 +28,10 @@ export default function AboutSection() {
       className="min-h-screen flex items-center relative overflow-hidden bg-background"
       data-testid="about-section"
     >
-      <div className="container mx-auto px-8 relative z-10">
+      <div className="w-full relative z-10">
           
           {/* Card Container */}
-          <div className="bg-card rounded-xl shadow-lg border border-border p-12 w-full">
+          <div className="bg-card shadow-lg border border-border p-12 w-full">
             <div className="flex flex-col lg:flex-row gap-16 items-start">
               
               {/* Left Column */}
