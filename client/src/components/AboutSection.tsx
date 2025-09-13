@@ -122,23 +122,66 @@ export default function AboutSection() {
                 >
                   <h3 className="text-lg font-semibold text-foreground mb-4">Software</h3>
                   <div className="flex flex-wrap gap-3">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <span className="text-blue-600 font-bold text-xs">Fi</span>
+                    {/* Figma */}
+                    <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-sm border">
+                      <div className="w-8 h-8 relative">
+                        <div className="absolute top-0 left-2 w-2 h-2 bg-red-500 rounded-full"></div>
+                        <div className="absolute top-0 left-0 w-2 h-2 bg-orange-500 rounded-full"></div>
+                        <div className="absolute top-2 left-0 w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <div className="absolute top-2 left-2 w-2 h-2 bg-purple-500 rounded-full"></div>
+                        <div className="absolute top-4 left-1 w-2 h-2 bg-green-500 rounded-full"></div>
+                      </div>
                     </div>
-                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                      <span className="text-orange-600 font-bold text-xs">Ai</span>
+                    
+                    {/* Photoshop */}
+                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">Ps</span>
                     </div>
-                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                      <span className="text-purple-600 font-bold text-xs">Ps</span>
+                    
+                    {/* Sketch */}
+                    <div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center">
+                      <div className="w-6 h-6 border-2 border-orange-600 rotate-45 bg-yellow-300"></div>
                     </div>
-                    <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
-                      <span className="text-red-600 font-bold text-xs">Ai</span>
+                    
+                    {/* Adobe XD */}
+                    <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">Xd</span>
                     </div>
-                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                      <span className="text-orange-600 font-bold text-xs">≡</span>
+                    
+                    {/* Adobe Illustrator */}
+                    <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">Ai</span>
                     </div>
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <span className="text-blue-600 font-bold text-xs">{`{}`}</span>
+                    
+                    {/* GitHub */}
+                    <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center">
+                      <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                        <span className="text-gray-900 font-bold text-xs">GH</span>
+                      </div>
+                    </div>
+                    
+                    {/* React */}
+                    <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center">
+                      <div className="w-6 h-6 relative">
+                        <div className="absolute inset-0 border-2 border-white rounded-full"></div>
+                        <div className="absolute top-1 left-1 w-4 h-4 border border-white rounded-full rotate-45"></div>
+                        <div className="absolute top-1 left-1 w-4 h-4 border border-white rounded-full -rotate-45"></div>
+                      </div>
+                    </div>
+                    
+                    {/* Next.js */}
+                    <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-xs">N</span>
+                    </div>
+                    
+                    {/* HTML */}
+                    <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-xs">HTML</span>
+                    </div>
+                    
+                    {/* CSS */}
+                    <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-xs">CSS</span>
                     </div>
                   </div>
                 </div>
@@ -181,18 +224,6 @@ export default function AboutSection() {
                   </ul>
                 </div>
 
-                {/* Information */}
-                <div 
-                  className={`transition-all duration-1000 delay-1500 ${
-                    animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                  }`}
-                >
-                  <h3 className="text-lg font-semibold text-foreground mb-4">Information</h3>
-                  <div className="text-sm text-muted-foreground space-y-2">
-                    <p>irajshahid.portfolio.com</p>
-                    <p>linkedin.com/in/irajshahid</p>
-                  </div>
-                </div>
               </div>
 
             </div>
