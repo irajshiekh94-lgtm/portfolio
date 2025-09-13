@@ -63,9 +63,8 @@ export default function HeroSection() {
               animateText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <h2 className="text-5xl lg:text-6xl font-extralight text-foreground mb-8 leading-[0.9] tracking-tight">
-              USER<br />
-              EXPERIENCE<br />
+            <h2 className="text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-[0.9] tracking-tight">
+              UI UX<br />
               DESIGNER
             </h2>
             <p className="text-muted-foreground text-xl leading-relaxed max-w-md ml-auto font-light">
