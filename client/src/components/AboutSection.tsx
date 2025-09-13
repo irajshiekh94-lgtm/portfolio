@@ -29,10 +29,9 @@ export default function AboutSection() {
       data-testid="about-section"
     >
       <div className="container mx-auto px-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
           
           {/* Card Container */}
-          <div className="bg-card rounded-xl shadow-lg border border-border p-12">
+          <div className="bg-card rounded-xl shadow-lg border border-border p-12 w-full">
             <div className="flex flex-col lg:flex-row gap-16 items-start">
               
               {/* Left Column */}
@@ -229,7 +228,6 @@ export default function AboutSection() {
             </div>
           </div>
 
-        </div>
       </div>
     </section>
   );
