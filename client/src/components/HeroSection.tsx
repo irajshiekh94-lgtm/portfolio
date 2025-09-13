@@ -21,20 +21,6 @@ export default function HeroSection() {
         `
       }}
     >
-      {/* Signature in top-left */}
-      <div 
-        className={`absolute top-8 left-8 lg:left-12 z-10 opacity-0 ${
-          isVisible ? 'animate-fade-in' : ''
-        }`}
-        style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}
-      >
-        <p 
-          className="font-script text-xl lg:text-2xl text-gray-500 opacity-80"
-          data-testid="text-signature"
-        >
-          Iraj Shahid
-        </p>
-      </div>
 
       {/* Main Content */}
       <div className="container mx-auto px-6 relative z-10">

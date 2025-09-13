@@ -29,10 +29,10 @@ export default function AboutSection() {
       data-testid="about-section"
     >
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center gap-16 max-w-6xl mx-auto">
           
-          {/* Left Content */}
-          <div className="space-y-8">
+          {/* Left Content - Text */}
+          <div className="flex-1 space-y-8">
             <div 
               className={`transition-all duration-1000 ${
                 animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -77,7 +77,7 @@ export default function AboutSection() {
           </div>
 
           {/* Right Content - Photo */}
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex-shrink-0">
             <div 
               className={`transition-all duration-1000 delay-700 ${
                 animateContent ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
