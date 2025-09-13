@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
+import AboutSection from '@/components/AboutSection';
 import ProcessSection from '@/components/ProcessSection';
 import ProjectShowcase from '@/components/ProjectShowcase';
 import SocialSection from '@/components/SocialSection';
@@ -44,6 +45,7 @@ export default function Portfolio() {
       
       <main>
         <HeroSection />
+        <AboutSection />
         <ProcessSection />
         <ProjectShowcase />
         <SocialSection />
