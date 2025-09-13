@@ -46,10 +46,10 @@ export default function ProcessSection() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl">
-          <h2 className="text-5xl lg:text-6xl font-light text-foreground mb-4">
+          <h2 className="text-6xl lg:text-7xl font-extralight text-foreground mb-6 leading-[0.9] tracking-tight">
             MY PROCESS
           </h2>
-          <p className="text-muted-foreground text-lg mb-16 max-w-2xl">
+          <p className="text-muted-foreground text-xl mb-16 max-w-2xl font-light leading-relaxed">
             I use a design-thinking methodology in my process with great focus on users.
           </p>
 
@@ -76,7 +76,7 @@ export default function ProcessSection() {
                 
                 <div className="flex-1">
                   <h3 
-                    className={`text-2xl lg:text-3xl font-light mb-4 transition-colors duration-300 ${
+                    className={`text-3xl lg:text-4xl font-extralight mb-4 transition-colors duration-300 tracking-tight ${
                       hoveredStep === step.number ? 'text-foreground' : 'text-muted-foreground'
                     }`}
                   >
@@ -88,7 +88,7 @@ export default function ProcessSection() {
                   <div className={`overflow-hidden transition-all duration-500 ${
                     hoveredStep === step.number ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
                   }`}>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed font-light text-lg">
                       {step.description}
                     </p>
                   </div>

@@ -57,10 +57,10 @@ export default function ContactSection() {
         <div className="flex flex-col lg:flex-row gap-16 max-w-6xl mx-auto">
           {/* Left content */}
           <div className="flex-1">
-            <h2 className="text-5xl lg:text-6xl font-light text-foreground mb-4">
+            <h2 className="text-6xl lg:text-7xl font-extralight text-foreground mb-6 leading-[0.9] tracking-tight">
               LET'S CHAT!
             </h2>
-            <p className="text-muted-foreground text-lg mb-12 max-w-md">
+            <p className="text-muted-foreground text-xl mb-12 max-w-md font-light leading-relaxed">
               I'm available for new projects and collaborations
             </p>
 

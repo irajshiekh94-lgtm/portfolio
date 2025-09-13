@@ -56,10 +56,10 @@ export default function ProjectShowcase() {
     >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-5xl lg:text-6xl font-light text-foreground mb-4">
+          <h2 className="text-6xl lg:text-7xl font-extralight text-foreground mb-6 leading-[0.9] tracking-tight">
             FEATURED WORK
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-xl max-w-2xl mx-auto font-light leading-relaxed">
             A collection of recent projects showcasing user-centered design solutions.
           </p>
         </div>
@@ -94,13 +94,13 @@ export default function ProjectShowcase() {
                   >
                     <div className="absolute inset-0 flex items-center justify-center p-8">
                       <div className="text-center text-white">
-                        <h3 className="text-2xl lg:text-3xl font-light mb-2">
+                        <h3 className="text-3xl lg:text-4xl font-extralight mb-3 tracking-tight">
                           {project.title}
                         </h3>
-                        <p className="text-sm lg:text-base font-medium mb-4 opacity-90">
+                        <p className="text-base lg:text-lg font-light mb-4 opacity-90">
                           {project.subtitle}
                         </p>
-                        <p className="text-sm opacity-80 leading-relaxed mb-6 max-w-md">
+                        <p className="text-sm lg:text-base opacity-80 leading-relaxed mb-6 max-w-md font-light">
                           {project.description}
                         </p>
                         <div className="flex flex-wrap justify-center gap-2">

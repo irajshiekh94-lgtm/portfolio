@@ -9,11 +9,6 @@ export default function HeroSection() {
     return () => clearTimeout(timer);
   }, []);
 
-  const socialLinks = [
-    { name: 'INSTAGRAM', href: '#', label: 'Instagram' },
-    { name: 'LINKEDIN', href: '#', label: 'LinkedIn' },
-    { name: 'TIKTOK', href: '#', label: 'TikTok' }
-  ];
 
   return (
     <section 
@@ -36,30 +31,10 @@ export default function HeroSection() {
               animateText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <h1 className="text-6xl lg:text-7xl font-light text-foreground mb-4 leading-none">
+            <h1 className="text-7xl lg:text-8xl font-extralight text-foreground mb-4 leading-[0.85] tracking-tight">
               HEY,<br />
-              <span className="font-light">I'M IRAJ</span>
+              <span className="font-extralight">I'M IRAJ</span>
             </h1>
-          </div>
-          
-          <div 
-            className={`transition-all duration-1000 delay-300 ${
-              animateText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
-            <div className="space-y-3 mb-8">
-              {socialLinks.map((link, index) => (
-                <div key={link.name}>
-                  <a 
-                    href={link.href}
-                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 hover-elevate inline-block p-1"
-                    data-testid={`social-${link.name.toLowerCase()}`}
-                  >
-                    {link.name}
-                  </a>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
 
@@ -88,12 +63,12 @@ export default function HeroSection() {
               animateText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <h2 className="text-4xl lg:text-5xl font-light text-foreground mb-6 leading-tight">
+            <h2 className="text-5xl lg:text-6xl font-extralight text-foreground mb-8 leading-[0.9] tracking-tight">
               USER<br />
               EXPERIENCE<br />
               DESIGNER
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-md ml-auto">
+            <p className="text-muted-foreground text-xl leading-relaxed max-w-md ml-auto font-light">
               I'm a UX designer who loves designing products that are simple, intuitive and helpful.
             </p>
           </div>

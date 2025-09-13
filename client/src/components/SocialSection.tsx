@@ -30,7 +30,7 @@ export default function SocialSection() {
     >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-5xl lg:text-6xl font-light text-foreground mb-8">
+          <h2 className="text-6xl lg:text-7xl font-extralight text-foreground mb-8 leading-[0.9] tracking-tight">
             FIND ME ON<br />
             INSTAGRAM
           </h2>
