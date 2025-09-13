@@ -2,14 +2,6 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import profileImage from '@assets/Snapchat-570485137_1757800212972.jpg';
 
-//TODO: remove mock functionality
-const mockInstagramPosts = [
-  { id: 1, image: profileImage, views: '776K', type: 'video' },
-  { id: 2, image: profileImage, views: '241M', type: 'video' },
-  { id: 3, image: profileImage, views: '761K', type: 'video' },
-  { id: 4, image: profileImage, views: '905K', type: 'video' },
-  { id: 5, image: profileImage, views: '667K', type: 'video' }
-];
 
 export default function SocialSection() {
   const handleFollowClick = () => {
@@ -17,10 +9,6 @@ export default function SocialSection() {
     // TODO: Add Instagram follow functionality
   };
 
-  const handlePostClick = (postId: number) => {
-    console.log(`Instagram post ${postId} clicked`);
-    // TODO: Add Instagram post view functionality
-  };
 
   return (
     <section 
@@ -58,44 +46,6 @@ export default function SocialSection() {
               </Button>
             </div>
           </div>
-        </div>
-
-        {/* Instagram Posts Grid */}
-        <div className="flex justify-center gap-4 overflow-x-auto pb-4">
-          {mockInstagramPosts.map((post, index) => (
-            <div 
-              key={post.id}
-              className="flex-shrink-0 w-64 aspect-[3/4] relative group cursor-pointer hover-elevate rounded-lg overflow-hidden"
-              onClick={() => handlePostClick(post.id)}
-              data-testid={`instagram-post-${post.id}`}
-            >
-              <img 
-                src={post.image}
-                alt={`Instagram post ${post.id}`}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              
-              {/* Play button for videos */}
-              {post.type === 'video' && (
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-12 h-12 bg-black/50 rounded-full flex items-center justify-center backdrop-blur-sm">
-                    <div className="w-0 h-0 border-l-[8px] border-l-white border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent ml-1"></div>
-                  </div>
-                </div>
-              )}
-              
-              {/* Views counter */}
-              <div className="absolute bottom-4 left-4 bg-black/50 rounded-full px-3 py-1 backdrop-blur-sm">
-                <p className="text-white text-sm font-medium">
-                  <span className="mr-1">▶</span>
-                  {post.views}
-                </p>
-              </div>
-
-              {/* Hover overlay */}
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-          ))}
         </div>
 
         <div className="text-center mt-12">

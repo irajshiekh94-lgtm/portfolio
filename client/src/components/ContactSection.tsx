@@ -38,8 +38,7 @@ export default function ContactSection() {
 
   const socialLinks = [
     { name: 'Instagram', href: '#', icon: '📷' },
-    { name: 'LinkedIn', href: '#', icon: '💼' },
-    { name: 'TikTok', href: '#', icon: '🎵' }
+    { name: 'LinkedIn', href: '#', icon: '💼' }
   ];
 
   return (
