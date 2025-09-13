@@ -45,30 +45,6 @@ export default function AboutSection() {
           {/* Main Content Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            {/* Photo Column */}
-            <div className="lg:col-span-5">
-              <div 
-                className={`transition-all duration-1000 delay-300 ${
-                  animateContent ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-                }`}
-              >
-                <div className="relative mx-auto lg:mx-0 max-w-sm">
-                  <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
-                    <img 
-                      src={profileImage}
-                      alt="Iraj Shahid - UI/UX Designer"
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                      data-testid="about-profile-image"
-                    />
-                  </div>
-                  
-                  {/* Decorative elements */}
-                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full animate-pulse"></div>
-                  <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-accent/30 rounded-full"></div>
-                </div>
-              </div>
-            </div>
-
             {/* Text Content Column */}
             <div className="lg:col-span-7 space-y-8">
               <div 
@@ -103,28 +79,28 @@ export default function AboutSection() {
                   </p>
                 </div>
               </div>
+            </div>
 
-              {/* Skills or CTA section */}
+            {/* Photo Column */}
+            <div className="lg:col-span-5">
               <div 
-                className={`transition-all duration-1000 delay-900 ${
-                  animateContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                className={`transition-all duration-1000 delay-300 ${
+                  animateContent ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
                 }`}
               >
-                <div className="pt-8 border-t border-border/30">
-                  <p className="text-sm text-muted-foreground uppercase tracking-widest mb-4">
-                    Core Focus
-                  </p>
-                  <div className="flex flex-wrap gap-4">
-                    <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                      UI Design
-                    </span>
-                    <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                      UX Research
-                    </span>
-                    <span className="px-4 py-2 bg-muted/20 text-muted-foreground rounded-full text-sm font-medium">
-                      Prototyping
-                    </span>
+                <div className="relative mx-auto lg:mx-0 max-w-sm">
+                  <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+                    <img 
+                      src={profileImage}
+                      alt="Iraj Shahid - UI/UX Designer"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      data-testid="about-profile-image"
+                    />
                   </div>
+                  
+                  {/* Decorative elements */}
+                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full animate-pulse"></div>
+                  <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-accent/30 rounded-full"></div>
                 </div>
               </div>
             </div>
