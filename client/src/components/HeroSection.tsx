@@ -35,32 +35,19 @@ export default function HeroSection() {
           </div>
 
           {/* Main Content */}
-          <div className="relative z-10 text-center">
+          <div className="relative z-10">
             
-            {/* Year Badge */}
-            <div 
-              className={`transition-all duration-1000 ${
-                animateText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
-            >
-              <div className="inline-block mb-8">
-                <span className="text-6xl lg:text-7xl font-light text-muted-foreground/60">
-                  '25
-                </span>
-              </div>
-            </div>
-
             {/* Profile Image */}
             <div 
-              className={`transition-all duration-1000 delay-500 ${
+              className={`transition-all duration-1000 delay-300 ${
                 animateText ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
               }`}
             >
-              <div className="relative mx-auto mb-8">
-                <div className="w-64 h-64 lg:w-80 lg:h-80 mx-auto rounded-full overflow-hidden shadow-2xl ring-8 ring-white/10">
+              <div className="relative mx-auto mb-12 flex justify-center">
+                <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-2xl overflow-hidden shadow-2xl ring-8 ring-white/10">
                   <img 
                     src={profileImage}
-                    alt="Iraj - UI/UX Designer"
+                    alt="Iraj Shahid - UI/UX Designer"
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                     data-testid="profile-image"
                   />
@@ -76,40 +63,40 @@ export default function HeroSection() {
 
             {/* Name */}
             <div 
-              className={`transition-all duration-1000 delay-700 ${
+              className={`transition-all duration-1000 delay-500 ${
                 animateText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              <h2 className="text-4xl lg:text-5xl font-light text-muted-foreground mb-2 tracking-widest">
-                IRAJ
+              <h2 className="text-4xl lg:text-5xl font-light text-muted-foreground mb-4 tracking-widest text-left">
+                IRAJ SHAHID
               </h2>
             </div>
 
             {/* Job Title */}
             <div 
-              className={`transition-all duration-1000 delay-900 ${
+              className={`transition-all duration-1000 delay-700 ${
                 animateText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-8 tracking-wide">
+              <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-8 tracking-wide text-right">
                 UI UX DESIGNER
               </h3>
             </div>
 
             {/* Description */}
             <div 
-              className={`transition-all duration-1000 delay-1100 ${
+              className={`transition-all duration-1000 delay-900 ${
                 animateText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              <p className="text-muted-foreground text-lg leading-relaxed max-w-md mx-auto font-light mb-10">
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-lg font-light mb-10 text-center mx-auto">
                 Crafting digital experiences that are simple, intuitive and delightful.
               </p>
             </div>
 
             {/* CTA Buttons */}
             <div 
-              className={`transition-all duration-1000 delay-1300 ${
+              className={`transition-all duration-1000 delay-1100 ${
                 animateText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
@@ -137,17 +124,6 @@ export default function HeroSection() {
               </div>
             </div>
 
-          </div>
-
-          {/* Available for work badge */}
-          <div 
-            className={`absolute top-8 right-8 transition-all duration-1000 delay-1500 ${
-              animateText ? 'opacity-100 rotate-0' : 'opacity-0 rotate-12'
-            }`}
-          >
-            <div className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
-              Available for work
-            </div>
           </div>
 
         </div>
