@@ -21,55 +21,12 @@ export default function HeroSection() {
         `
       }}
     >
-      {/* Top Navigation */}
-      <nav className="absolute top-0 left-0 right-0 z-20 px-8 lg:px-12 py-8">
-        <div className="flex justify-between items-center">
-          {/* Left: Year */}
-          <div 
-            className={`text-sm font-medium text-gray-600 opacity-0 ${
-              isVisible ? 'animate-fade-in' : ''
-            }`}
-            style={{ animationDelay: '100ms', animationFillMode: 'forwards' }}
-            data-testid="nav-year"
-          >
-            2024
-          </div>
-
-          {/* Right: External Links */}
-          <div 
-            className={`flex items-center gap-8 text-sm font-medium text-gray-600 opacity-0 ${
-              isVisible ? 'animate-fade-in' : ''
-            }`}
-            style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}
-          >
-            <a 
-              href="https://behance.net/irajshahid" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:text-gray-900 transition-colors duration-200"
-              data-testid="link-behance"
-            >
-              Behance
-            </a>
-            <a 
-              href="https://linkedin.com/in/irajshahid" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:text-gray-900 transition-colors duration-200"
-              data-testid="link-linkedin"
-            >
-              LinkedIn
-            </a>
-          </div>
-        </div>
-      </nav>
-
-      {/* Signature in top-right */}
+      {/* Signature in top-left */}
       <div 
-        className={`absolute top-20 right-8 lg:right-12 z-10 opacity-0 ${
-          isVisible ? 'animate-fade-in-right' : ''
+        className={`absolute top-8 left-8 lg:left-12 z-10 opacity-0 ${
+          isVisible ? 'animate-fade-in' : ''
         }`}
-        style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}
+        style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}
       >
         <p 
           className="font-script text-xl lg:text-2xl text-gray-500 opacity-80"
