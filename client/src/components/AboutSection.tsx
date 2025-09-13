@@ -44,7 +44,7 @@ export default function AboutSection() {
                   }`}
                 >
                   <h2 className="text-5xl lg:text-6xl font-light text-foreground leading-tight mb-8">
-                    Hello,
+                    Hello I'm Iraj
                   </h2>
                 </div>
 
@@ -73,7 +73,9 @@ export default function AboutSection() {
                   }`}
                 >
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    I'm Iraj, a budding <strong>UX designer</strong>. I enjoy using my creativity and problem solving skills to solve customer experiences. With a keen understanding of usability, I specialize in creating interfaces that don't just look great, but also work intuitively. Passionate about user-centered design that continuous learning is the key to success, and I'm always on the lookout for fresh challenges to keep me motivated and engaged.
+                    I specialize in crafting clean, user-friendly interfaces backed by thoughtful design strategy. From wireframes to polished prototypes, I focus on blending creativity with usability to make designs not just look good — but feel intuitive.
+                    <br /><br />
+                    Passionate about designing with purpose, I love building products that tell a story, solve real problems, and create impact for users. Whether it's a mobile app, web app, or interactive prototype, my goal is always the same: make design simple, human, and engaging.
                   </p>
                 </div>
               </div>
@@ -90,21 +92,23 @@ export default function AboutSection() {
                   
                   <div className="space-y-6">
                     <div>
-                      <h4 className="font-medium text-foreground">UX Generalist Designer at Forbes Marshall Pvt Ltd</h4>
-                      <p className="text-sm text-muted-foreground mb-2">15 May 2024 - 12 July 2024</p>
+                      <h4 className="font-medium text-foreground">UI UX Designer Intern at Al Khidmat</h4>
+                      <p className="text-sm text-muted-foreground mb-2">Current Position</p>
                       <ul className="text-sm text-muted-foreground space-y-1">
-                        <li>• Organized interviews and conducted surveys for better user experience</li>
-                        <li>• Created user flows and user journey, illustrations</li>
-                        <li>• Visual design elements, final prototyping along with user testing</li>
-                        <li>• Also created a design system for further projects reference with the team.</li>
+                        <li>• Designing user-centered digital experiences for social impact</li>
+                        <li>• Creating wireframes and prototypes for web and mobile applications</li>
+                        <li>• Conducting user research and usability testing</li>
+                        <li>• Collaborating with development teams on design implementation</li>
                       </ul>
                     </div>
                     
                     <div>
-                      <h4 className="font-medium text-foreground">Visual Designer at Birbal Infotech Pvt Ltd</h4>
-                      <p className="text-sm text-muted-foreground mb-2">12 April 2024 - 12 May 2024</p>
+                      <h4 className="font-medium text-foreground">Brand Ambassador of JI Youth Women</h4>
+                      <p className="text-sm text-muted-foreground mb-2">Leadership Role</p>
                       <ul className="text-sm text-muted-foreground space-y-1">
-                        <li>• Worked for a travel company, made creatives for social media along with iterary template using figma and illustrator.</li>
+                        <li>• Representing and promoting organizational values and initiatives</li>
+                        <li>• Creating visual content and promotional materials for campaigns</li>
+                        <li>• Engaging with community members and building brand awareness</li>
                       </ul>
                     </div>
                   </div>
