@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import profileImage from '@assets/generated_images/Professional_designer_headshot_ec43f1f0.png';
+import profileImage from '@assets/Snapchat-570485137_1757800212972.jpg';
 
 export default function HeroSection() {
   const [animateText, setAnimateText] = useState(false);

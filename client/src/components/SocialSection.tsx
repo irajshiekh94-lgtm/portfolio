@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import profileImage from '@assets/generated_images/Professional_designer_headshot_ec43f1f0.png';
+import profileImage from '@assets/Snapchat-570485137_1757800212972.jpg';
 
 //TODO: remove mock functionality
 const mockInstagramPosts = [
