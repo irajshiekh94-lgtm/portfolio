@@ -36,9 +36,9 @@ export default function HeroSection() {
       }}
     >
       {/* Top Animated Text */}
-      <div className="absolute top-0 left-0 right-0 h-12 overflow-hidden bg-black text-white flex items-center z-30">
+      <div className="absolute top-0 left-0 right-0 h-6 sm:h-8 md:h-12 overflow-hidden bg-black text-white flex items-center z-30">
         <motion.div
-          className="whitespace-nowrap text-sm font-light tracking-[0.2em] flex"
+          className="whitespace-nowrap text-xs sm:text-sm font-light tracking-[0.2em] flex"
           animate={{ x: [0, -2000] }}
           transition={{
             duration: 25,
@@ -51,9 +51,9 @@ export default function HeroSection() {
       </div>
 
       {/* Bottom Animated Text */}
-      <div className="absolute bottom-0 left-0 right-0 h-12 overflow-hidden bg-black text-white flex items-center z-30">
+      <div className="absolute bottom-0 left-0 right-0 h-6 sm:h-8 md:h-12 overflow-hidden bg-black text-white flex items-center z-30">
         <motion.div
-          className="whitespace-nowrap text-sm font-light tracking-[0.2em] flex"
+          className="whitespace-nowrap text-xs sm:text-sm font-light tracking-[0.2em] flex"
           animate={{ x: [-2000, 0] }}
           transition={{
             duration: 28,
@@ -66,9 +66,9 @@ export default function HeroSection() {
       </div>
 
       {/* Left Animated Text */}
-      <div className="absolute left-0 top-12 bottom-12 w-12 overflow-hidden bg-black text-white flex items-center justify-center z-30">
+      <div className="absolute left-0 top-6 sm:top-8 md:top-12 bottom-6 sm:bottom-8 md:bottom-12 w-6 sm:w-8 md:w-12 overflow-hidden bg-black text-white flex items-center justify-center z-30">
         <motion.div
-          className="whitespace-nowrap text-sm font-light tracking-[0.2em] transform -rotate-90 origin-center"
+          className="whitespace-nowrap text-xs sm:text-sm font-light tracking-[0.2em] transform -rotate-90 origin-center"
           animate={{ y: [0, -1500] }}
           transition={{
             duration: 30,
@@ -81,9 +81,9 @@ export default function HeroSection() {
       </div>
 
       {/* Right Animated Text */}
-      <div className="absolute right-0 top-12 bottom-12 w-12 overflow-hidden bg-black text-white flex items-center justify-center z-30">
+      <div className="absolute right-0 top-6 sm:top-8 md:top-12 bottom-6 sm:bottom-8 md:bottom-12 w-6 sm:w-8 md:w-12 overflow-hidden bg-black text-white flex items-center justify-center z-30">
         <motion.div
-          className="whitespace-nowrap text-sm font-light tracking-[0.2em] transform rotate-90 origin-center"
+          className="whitespace-nowrap text-xs sm:text-sm font-light tracking-[0.2em] transform rotate-90 origin-center"
           animate={{ y: [-1500, 0] }}
           transition={{
             duration: 32,
@@ -129,9 +129,9 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* Pinned Photo */}
+      {/* Pinned Photo - Hidden on small screens */}
       <div 
-        className={`absolute top-16 right-8 md:top-24 md:right-16 lg:top-32 lg:right-24 opacity-0 z-20 ${
+        className={`absolute top-16 right-8 md:top-24 md:right-16 lg:top-32 lg:right-24 opacity-0 z-20 hidden md:block ${
           isVisible ? 'animate-fade-in' : ''
         }`}
         style={{ 
@@ -175,13 +175,56 @@ export default function HeroSection() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col items-center justify-center min-h-screen text-center pt-12 pb-12">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="flex flex-col items-center justify-center min-h-screen text-center pt-6 sm:pt-12 pb-12">
           
-          {/* Handwritten Portfolio Text with Letter Animation */}
-          <div className="mb-6 relative">
+          {/* Mobile Photo - Centered below portfolio text */}
+          <div 
+            className={`md:hidden mb-8 opacity-0 z-20 relative ${
+              isVisible ? 'animate-fade-in' : ''
+            }`}
+            style={{ 
+              animationDelay: '2.2s', 
+              animationFillMode: 'forwards'
+            }}
+          >
+            {/* Pin Shadow */}
+            <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-black/10 rounded-full blur-sm"></div>
+            
+            {/* Pin */}
+            <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 z-20">
+              <div className="w-4 h-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full shadow-lg relative">
+                <div className="absolute inset-1 bg-gradient-to-br from-red-400 to-red-500 rounded-full"></div>
+                <div className="absolute top-0.5 left-1 w-1 h-1 bg-red-300/80 rounded-full"></div>
+                {/* Pin needle */}
+                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-0.5 h-2 bg-gray-400 shadow-sm"></div>
+              </div>
+            </div>
+
+            {/* Mobile Polaroid Photo Frame - Smaller and centered */}
+            <div className="bg-white p-2 pb-4 shadow-xl transform hover:scale-105 transition-transform duration-300 mx-auto">
+              <div className="w-32 h-36 bg-gray-100 overflow-hidden">
+                <img
+                  src={imagecopy}
+                  alt="Iraj"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Photo caption area */}
+              <div className="h-6 flex items-center justify-center">
+                <p className="text-gray-600 font-handwriting text-sm tracking-wide">
+                 HELLO!
+                </p>
+              </div>
+            </div>
+            
+            {/* Photo shadow */}
+            <div className="absolute inset-0 bg-black/20 blur-xl transform translate-y-2 -z-10 opacity-30"></div>
+          </div>
+          {/* Handwritten Portfolio Text with Letter Animation - Responsive sizing */}
+          <div className="mb-4 sm:mb-6 relative">
             <h1 
-              className="font-handwriting text-[8rem] lg:text-[12rem] xl:text-[15rem] font-bold text-gray-800 leading-none tracking-tight select-none"
+              className="font-handwriting text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-[8rem] xl:text-[12rem] 2xl:text-[15rem] font-bold text-gray-800 leading-none tracking-tight select-none"
               data-testid="text-portfolio"
             >
               {showLetters ? (
@@ -204,7 +247,7 @@ export default function HeroSection() {
             
             {/* Decorative underline */}
             <div 
-              className={`absolute -bottom-4 left-1/2 transform -translate-x-1/2 h-1 bg-gradient-to-r from-transparent via-rose-300/40 to-transparent opacity-0 ${
+              className={`absolute -bottom-2 sm:-bottom-4 left-1/2 transform -translate-x-1/2 h-0.5 sm:h-1 bg-gradient-to-r from-transparent via-rose-300/40 to-transparent opacity-0 ${
                 isVisible ? 'animate-fade-in' : ''
               }`}
               style={{ 
@@ -215,7 +258,7 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Subtitle with Bounce Animation */}
+          {/* Subtitle with Bounce Animation - Responsive text */}
           <div 
             className={`opacity-0 ${
               isVisible ? 'animate-bounce-in' : ''
@@ -223,20 +266,20 @@ export default function HeroSection() {
             style={{ animationDelay: '1.6s', animationFillMode: 'forwards' }}
           >
             <p 
-              className="text-lg lg:text-xl font-medium text-gray-600 tracking-wide relative"
+              className="text-base sm:text-lg lg:text-xl font-medium text-gray-600 tracking-wide relative"
               data-testid="text-subtitle"
             >
               UX/UI Designer
               
-              {/* Small decorative elements around subtitle */}
+              {/* Small decorative elements around subtitle - Hidden on very small screens */}
               <span 
-                className={`absolute -left-8 top-1/2 transform -translate-y-1/2 w-1 h-1 bg-rose-400/50 rounded-full opacity-0 ${
+                className={`absolute -left-6 sm:-left-8 top-1/2 transform -translate-y-1/2 w-1 h-1 bg-rose-400/50 rounded-full opacity-0 hidden sm:block ${
                   isVisible ? 'animate-pulse-glow' : ''
                 }`}
                 style={{ animationDelay: '2.2s', animationFillMode: 'forwards' }}
               />
               <span 
-                className={`absolute -right-8 top-1/2 transform -translate-y-1/2 w-1 h-1 bg-orange-400/50 rounded-full opacity-0 ${
+                className={`absolute -right-6 sm:-right-8 top-1/2 transform -translate-y-1/2 w-1 h-1 bg-orange-400/50 rounded-full opacity-0 hidden sm:block ${
                   isVisible ? 'animate-pulse-glow' : ''
                 }`}
                 style={{ animationDelay: '2.4s', animationFillMode: 'forwards' }}
@@ -246,13 +289,13 @@ export default function HeroSection() {
 
           {/* Subtle scroll indicator with animation */}
           <div 
-            className={`absolute bottom-20 left-1/2 transform -translate-x-1/2 opacity-0 ${
+            className={`absolute bottom-12 sm:bottom-20 left-1/2 transform -translate-x-1/2 opacity-0 ${
               isVisible ? 'animate-fade-in animate-float' : ''
             }`}
             style={{ animationDelay: '3s', animationFillMode: 'forwards' }}
           >
-            <div className="flex flex-col items-center space-y-2">
-              <div className="w-px h-8 bg-gradient-to-b from-gray-400 to-transparent"></div>
+            <div className="flex flex-col items-center space-y-1 sm:space-y-2">
+              <div className="w-px h-6 sm:h-8 bg-gradient-to-b from-gray-400 to-transparent"></div>
               <div className="w-1 h-1 bg-gray-400 rounded-full animate-pulse"></div>
             </div>
           </div>
