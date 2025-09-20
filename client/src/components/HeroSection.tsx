@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import imagecopy from "../assets/imagecopy.jpg";
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,6 +17,10 @@ export default function HeroSection() {
 
   const portfolioLetters = 'portfolio'.split('');
 
+  // Animated text content for borders
+  const topBottomText = "CREATIVE DESIGNER • PORTFOLIO • CONTACT • UX RESEARCH • UI DESIGN • INNOVATIVE SOLUTIONS • ";
+  const sideText = "FIGMA • ADOBE CREATIVE SUITE • PROTOTYPING • USER EXPERIENCE • WEB DESIGN • ";
+
   return (
     <section 
       id="hero" 
@@ -29,8 +35,68 @@ export default function HeroSection() {
         `
       }}
     >
+      {/* Top Animated Text */}
+      <div className="absolute top-0 left-0 right-0 h-12 overflow-hidden bg-black text-white flex items-center z-30">
+        <motion.div
+          className="whitespace-nowrap text-sm font-light tracking-[0.2em] flex"
+          animate={{ x: [0, -2000] }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        >
+          <span>{topBottomText.repeat(3)}</span>
+        </motion.div>
+      </div>
+
+      {/* Bottom Animated Text */}
+      <div className="absolute bottom-0 left-0 right-0 h-12 overflow-hidden bg-black text-white flex items-center z-30">
+        <motion.div
+          className="whitespace-nowrap text-sm font-light tracking-[0.2em] flex"
+          animate={{ x: [-2000, 0] }}
+          transition={{
+            duration: 28,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        >
+          <span>{topBottomText.repeat(3)}</span>
+        </motion.div>
+      </div>
+
+      {/* Left Animated Text */}
+      <div className="absolute left-0 top-12 bottom-12 w-12 overflow-hidden bg-black text-white flex items-center justify-center z-30">
+        <motion.div
+          className="whitespace-nowrap text-sm font-light tracking-[0.2em] transform -rotate-90 origin-center"
+          animate={{ y: [0, -1500] }}
+          transition={{
+            duration: 30,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        >
+          <span>{sideText.repeat(4)}</span>
+        </motion.div>
+      </div>
+
+      {/* Right Animated Text */}
+      <div className="absolute right-0 top-12 bottom-12 w-12 overflow-hidden bg-black text-white flex items-center justify-center z-30">
+        <motion.div
+          className="whitespace-nowrap text-sm font-light tracking-[0.2em] transform rotate-90 origin-center"
+          animate={{ y: [-1500, 0] }}
+          transition={{
+            duration: 32,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        >
+          <span>{sideText.repeat(4)}</span>
+        </motion.div>
+      </div>
+
       {/* Floating Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
         <div 
           className={`absolute top-20 left-10 w-2 h-2 bg-rose-300/30 rounded-full opacity-0 ${
             isVisible ? 'animate-float animate-fade-in' : ''
@@ -63,9 +129,54 @@ export default function HeroSection() {
         />
       </div>
 
+      {/* Pinned Photo */}
+      <div 
+        className={`absolute top-16 right-8 md:top-24 md:right-16 lg:top-32 lg:right-24 opacity-0 z-20 ${
+          isVisible ? 'animate-fade-in' : ''
+        }`}
+        style={{ 
+          animationDelay: '2.2s', 
+          animationFillMode: 'forwards',
+          transform: 'rotate(8deg)',
+        }}
+      >
+        {/* Pin Shadow */}
+        <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-black/10 rounded-full blur-sm"></div>
+        
+        {/* Pin */}
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
+          <div className="w-6 h-6 bg-gradient-to-br from-red-500 to-red-600 rounded-full shadow-lg relative">
+            <div className="absolute inset-1 bg-gradient-to-br from-red-400 to-red-500 rounded-full"></div>
+            <div className="absolute top-0.5 left-1 w-1 h-1 bg-red-300/80 rounded-full"></div>
+            {/* Pin needle */}
+            <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-3 bg-gray-400 shadow-sm"></div>
+          </div>
+        </div>
+
+        {/* Polaroid Photo Frame */}
+        <div className="bg-white p-3 pb-8 shadow-2xl transform hover:rotate-6 transition-transform duration-300 hover:scale-105">
+          <div className="w-48 h-56 md:w-56 md:h-64 lg:w-64 lg:h-72 bg-gray-100 overflow-hidden">
+            <img
+              src={imagecopy}
+              alt="Iraj"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {/* Photo caption area */}
+          <div className="h-12 flex items-center justify-center">
+            <p className="text-gray-600 font-handwriting text-lg tracking-wide">
+             HELLO!
+            </p>
+          </div>
+        </div>
+
+        {/* Photo shadow */}
+        <div className="absolute inset-0 bg-black/20 blur-xl transform translate-y-2 -z-10 opacity-30"></div>
+      </div>
+
       {/* Main Content */}
       <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col items-center justify-center min-h-screen text-center">
+        <div className="flex flex-col items-center justify-center min-h-screen text-center pt-12 pb-12">
           
           {/* Handwritten Portfolio Text with Letter Animation */}
           <div className="mb-6 relative">
@@ -135,7 +246,7 @@ export default function HeroSection() {
 
           {/* Subtle scroll indicator with animation */}
           <div 
-            className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 ${
+            className={`absolute bottom-20 left-1/2 transform -translate-x-1/2 opacity-0 ${
               isVisible ? 'animate-fade-in animate-float' : ''
             }`}
             style={{ animationDelay: '3s', animationFillMode: 'forwards' }}

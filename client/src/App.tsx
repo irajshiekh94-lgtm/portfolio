@@ -7,10 +7,18 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Portfolio from "@/pages/Portfolio";
 import NotFound from "@/pages/not-found";
 
+// Import your case study pages
+import AlKhidmatCaseStudy from "@/pages/AlKhidmatCaseStudy";
+import PanahCaseStudy from "@/pages/PanahCaseStudy";
+import IkeaCaseStudy from "@/pages/IkeaCaseStudy";
+
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Portfolio} />
+      <Route path="/case-studies/alkhidmat" component={AlKhidmatCaseStudy} />
+      <Route path="/case-studies/panah" component={PanahCaseStudy} />
+      <Route path="/case-studies/ikea" component={IkeaCaseStudy} />
       <Route component={NotFound} />
     </Switch>
   );

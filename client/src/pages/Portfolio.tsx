@@ -47,7 +47,7 @@ export default function Portfolio() {
         <HeroSection />
         <AboutSection />
         <ProcessSection />
-        <ProjectShowcase />
+       <ProjectShowcase/>
         <SocialSection />
         <ContactSection />
       </main>

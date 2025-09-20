@@ -37,8 +37,59 @@ export default function ContactSection() {
   };
 
   const socialLinks = [
-    { name: 'Instagram', href: '#', icon: '📷' },
-    { name: 'LinkedIn', href: '#', icon: '💼' }
+    { 
+      name: 'Instagram', 
+      href: 'https://www.instagram.com/ira_.designs/', 
+      icon: (
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          fill="currentColor" 
+          viewBox="0 0 24 24" 
+          className="w-6 h-6"
+        >
+          <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm4.25-.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+        </svg>
+      )
+    },
+    { 
+      name: 'LinkedIn', 
+      href: 'https://www.linkedin.com/in/iraj-shahid-76050030b', 
+      icon: (
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          fill="currentColor" 
+          viewBox="0 0 24 24" 
+          className="w-6 h-6"
+        >
+          <path d="M4.98 3.5c0 1.38-1.1 2.5-2.48 2.5S0 4.88 0 3.5 1.1 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zm9 0h3.84v2.08h.05c.54-1.02 1.86-2.08 3.75-2.08 4.01 0 4.75 2.64 4.75 6.08V24h-4v-7.25c0-1.73-.03-3.96-2.41-3.96-2.41 0-2.78 1.88-2.78 3.82V24h-4V8.5z"/>
+        </svg>
+      )
+    },
+    // Add this to your socialLinks array
+{
+  name: 'Email',
+  href: 'mailto:irajshahid90@gmail.com',
+  icon: (
+ <svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  fill="none" 
+  viewBox="0 0 24 24" 
+  stroke="currentColor" 
+  className="w-6 h-6"
+>
+  <path 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    strokeWidth={2} 
+    d="M3 10l9-6 9 6-9 6-9-6zm0 0v10l9-6 9 6V10" 
+  />
+</svg>
+
+
+  )
+}
+
+    
   ];
 
   return (
@@ -118,18 +169,24 @@ export default function ContactSection() {
               <p className="text-muted-foreground mb-8">
                 You can also find me here
               </p>
+              
 
               <div className="space-y-4">
                 {socialLinks.map((link) => (
                   <div key={link.name}>
                     <a
                       href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center gap-4 text-foreground hover:text-primary transition-colors duration-300 hover-elevate p-2 rounded-lg lg:justify-end"
                       data-testid={`social-link-${link.name.toLowerCase()}`}
                     >
-                      <span className="text-2xl">{link.icon}</span>
+                      {link.icon}
                       <span className="font-medium">{link.name}</span>
+                      
                     </a>
+                    
+                    
                   </div>
                 ))}
               </div>
